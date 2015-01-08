@@ -24,7 +24,8 @@
     [FCLocalDataController fetchMemberQueueListWithcomplitionHandler:^(NSArray *memberList, NSError *error){
         NSLog(@"member list from server %@", memberList);
     }];
-}
+    
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
