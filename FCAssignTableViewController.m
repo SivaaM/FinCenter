@@ -119,7 +119,10 @@
              NSString *isActive = [segmentedControl titleForSegmentAtIndex: [segmentedControl selectedSegmentIndex]];
              if([isActive isEqualToString:@"Active"])
              {
-                 cell.name.textColor=[UIColor greenColor];
+                 cell.name.textColor= [UIColor colorWithRed:46/255.0
+                                                                       green:204/255.0
+                                                                        blue:113/255.0
+                                                                       alpha:1];;
              }
              else
              {
