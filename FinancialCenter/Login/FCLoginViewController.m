@@ -104,7 +104,7 @@
         if([username isEqualToString:@"member"])
         {
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            FCMemberviewTableViewController *myVC = (FCMemberviewTableViewController *)[storyboard instantiateViewControllerWithIdentifier:@"Memberview"];
+            UINavigationController *myVC = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"Waitingtime"];
             
             
            
@@ -129,6 +129,17 @@
         }
         else{
             //floor manger
+         
+            
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            UINavigationController *myVC = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"WealthManagerQueue"];
+            
+            
+            
+            [self resignFirstResponder];
+            
+            [[[[UIApplication sharedApplication] delegate] window] setRootViewController:myVC];
+
         }
         
     }

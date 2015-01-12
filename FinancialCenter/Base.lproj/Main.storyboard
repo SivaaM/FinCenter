@@ -90,7 +90,23 @@
             </objects>
             <point key="canvasLocation" x="176" y="236"/>
         </scene>
-        <!--Memberview Table View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="5cm-L8-EQs">
+            <objects>
+                <navigationController storyboardIdentifier="Waitingtime" id="EdP-Zo-Le7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ASz-5H-pQg">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bBf-mf-TSx" kind="relationship" relationship="rootViewController" id="Vq7-LK-UQV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nzb-tt-8RL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="2695"/>
+        </scene>
+        <!--Waiting TIme-->
         <scene sceneID="jUE-li-I38">
             <objects>
                 <tableViewController storyboardIdentifier="Memberview" id="bBf-mf-TSx" customClass="FCMemberviewTableViewController" sceneMemberID="viewController">
@@ -198,11 +214,12 @@
                             <outlet property="delegate" destination="bBf-mf-TSx" id="iVH-bR-C0Q"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Waiting TIme" id="Tk4-It-bg2"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1G-Xd-SlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1124" y="1772"/>
+            <point key="canvasLocation" x="2024" y="2700"/>
         </scene>
         <!--Queue-->
         <scene sceneID="bdk-MR-BCc">
@@ -219,9 +236,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOG-1C-9Vx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2056" y="1527"/>
+            <point key="canvasLocation" x="2084" y="1739"/>
         </scene>
-        <!--Assign-->
+        <!--Queue-->
         <scene sceneID="Di0-lJ-jIj">
             <objects>
                 <tableViewController id="lM8-8o-FHa" customClass="FCQueueTableViewController" sceneMemberID="viewController">
@@ -333,7 +350,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Queue" id="S6g-CS-gae"/>
-                    <navigationItem key="navigationItem" title="Assign" id="qmN-Vm-FMG"/>
+                    <navigationItem key="navigationItem" title="Queue" id="qmN-Vm-FMG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnX-Ir-As5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -647,7 +664,7 @@
             </objects>
             <point key="canvasLocation" x="4236" y="486"/>
         </scene>
-        <!--Assign-->
+        <!--Wealth Manager-->
         <scene sceneID="cXi-FZ-AzK">
             <objects>
                 <tableViewController id="05S-it-7yp" customClass="FCAssignTableViewController" sceneMemberID="viewController">
@@ -692,7 +709,7 @@
                             <outlet property="delegate" destination="05S-it-7yp" id="BAq-xw-yJA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Assign" id="9kp-Tu-YpF">
+                    <navigationItem key="navigationItem" title="Wealth Manager" id="9kp-Tu-YpF">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="NXM-5a-OrE">
                             <connections>
                                 <segue destination="29x-F8-ARR" kind="push" id="RPo-LN-ljm"/>
@@ -704,11 +721,11 @@
             </objects>
             <point key="canvasLocation" x="3040" y="526"/>
         </scene>
-        <!--Assign-->
+        <!--Wealth Manager-->
         <scene sceneID="Ck1-Pf-B4Y">
             <objects>
                 <navigationController id="SoQ-ip-aN5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Assign" id="UBI-K8-iSk"/>
+                    <tabBarItem key="tabBarItem" title="Wealth Manager" id="UBI-K8-iSk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fdp-An-sCS">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -740,6 +757,121 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NW3-2H-bTj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1100" y="377"/>
+        </scene>
+        <!--Customer Information-->
+        <scene sceneID="BUJ-rX-2mF">
+            <objects>
+                <viewController id="23b-bf-BDU" customClass="FCCustomerInfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WZg-5p-VtA">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bqV-ze-eC5">
+                                <rect key="frame" x="168" y="194" width="51" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reason for Appointment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cn8-ne-wHA">
+                                <rect key="frame" x="100" y="241" width="187" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XTh-gD-seI">
+                                <rect key="frame" x="400" y="324" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Finished">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="finished:" destination="23b-bf-BDU" eventType="touchUpInside" id="aoK-rP-cWI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kCy-ee-PDP">
+                                <rect key="frame" x="313" y="193" width="207" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VbN-lP-TrS">
+                                <rect key="frame" x="313" y="241" width="207" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Customer Information" id="bYN-A4-YRy"/>
+                    <connections>
+                        <outlet property="name" destination="kCy-ee-PDP" id="xhz-Tp-4J8"/>
+                        <outlet property="reason" destination="VbN-lP-TrS" id="siD-8C-UD7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YCl-9g-T5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4236" y="-1898"/>
+        </scene>
+        <!--Wealth Manager Queue-->
+        <scene sceneID="zXS-kb-b1k">
+            <objects>
+                <tableViewController id="XKu-NR-Yo6" customClass="FCWealthQueueTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VYL-6g-EIx">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="wealthmanager" textLabel="XiH-PG-6li" style="IBUITableViewCellStyleDefault" id="oid-bC-vtT" customClass="FCAssignTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oid-bC-vtT" id="fMC-UH-Xha">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XiH-PG-6li">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="XiH-PG-6li" id="ntv-6N-coF"/>
+                                    <segue destination="23b-bf-BDU" kind="push" trigger="accessoryAction" id="GQO-Q5-pag"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XKu-NR-Yo6" id="Yh7-OR-176"/>
+                            <outlet property="delegate" destination="XKu-NR-Yo6" id="2YL-JR-0j3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Wealth Manager Queue" id="MNE-WS-Vix"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5B-bl-OVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3216" y="-1898"/>
+        </scene>
+        <!--Wealth Manager-->
+        <scene sceneID="5El-Gm-XOD">
+            <objects>
+                <navigationController storyboardIdentifier="WealthManagerQueue" id="X6a-xe-01r" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Wealth Manager" id="wX0-iQ-fPA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0OT-h8-FRS">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XKu-NR-Yo6" kind="relationship" relationship="rootViewController" id="hqj-jx-UyN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yj1-88-xeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2192" y="-1914"/>
         </scene>
     </scenes>
     <resources>

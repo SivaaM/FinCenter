@@ -22,6 +22,8 @@
 		BEB63C8F1A53BEAE0090FEA8 /* bullet_list@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB63C8E1A53BEAE0090FEA8 /* bullet_list@3x.png */; };
 		BED177791A5F1666002404D6 /* USAALogo.PNG in Resources */ = {isa = PBXBuildFile; fileRef = BED177781A5F1666002404D6 /* USAALogo.PNG */; };
 		BED1777B1A631A9C002404D6 /* USAALogo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = BED1777A1A631A9C002404D6 /* USAALogo_white.png */; };
+		BED1777E1A632EBC002404D6 /* FCWealthQueueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED1777D1A632EBC002404D6 /* FCWealthQueueTableViewController.m */; };
+		BED177811A6346E6002404D6 /* FCCustomerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED177801A6346E6002404D6 /* FCCustomerInfoViewController.m */; };
 		BEF97BE91A57092500FA4210 /* FCCheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF97BE81A57092500FA4210 /* FCCheckinViewController.m */; };
 		BEF97BEC1A57276400FA4210 /* FCAssignTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF97BEB1A57276400FA4210 /* FCAssignTableViewController.m */; };
 		BEF97BEF1A572CC100FA4210 /* FCAssignTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF97BEE1A572CC100FA4210 /* FCAssignTableViewCell.m */; };
@@ -64,6 +66,10 @@
 		BEB63C8E1A53BEAE0090FEA8 /* bullet_list@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bullet_list@3x.png"; sourceTree = "<group>"; };
 		BED177781A5F1666002404D6 /* USAALogo.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = USAALogo.PNG; sourceTree = "<group>"; };
 		BED1777A1A631A9C002404D6 /* USAALogo_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = USAALogo_white.png; sourceTree = "<group>"; };
+		BED1777C1A632EBC002404D6 /* FCWealthQueueTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCWealthQueueTableViewController.h; sourceTree = SOURCE_ROOT; };
+		BED1777D1A632EBC002404D6 /* FCWealthQueueTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCWealthQueueTableViewController.m; sourceTree = SOURCE_ROOT; };
+		BED1777F1A6346E6002404D6 /* FCCustomerInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCustomerInfoViewController.h; sourceTree = SOURCE_ROOT; };
+		BED177801A6346E6002404D6 /* FCCustomerInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCustomerInfoViewController.m; sourceTree = SOURCE_ROOT; };
 		BEF97BE71A57092500FA4210 /* FCCheckinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCheckinViewController.h; sourceTree = SOURCE_ROOT; };
 		BEF97BE81A57092500FA4210 /* FCCheckinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCheckinViewController.m; sourceTree = SOURCE_ROOT; };
 		BEF97BEA1A57276400FA4210 /* FCAssignTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAssignTableViewController.h; sourceTree = SOURCE_ROOT; };
@@ -181,6 +187,10 @@
 				BEF97BEE1A572CC100FA4210 /* FCAssignTableViewCell.m */,
 				BEF97BF01A57466400FA4210 /* FCAddViewController.h */,
 				BEF97BF11A57466400FA4210 /* FCAddViewController.m */,
+				BED1777C1A632EBC002404D6 /* FCWealthQueueTableViewController.h */,
+				BED1777D1A632EBC002404D6 /* FCWealthQueueTableViewController.m */,
+				BED1777F1A6346E6002404D6 /* FCCustomerInfoViewController.h */,
+				BED177801A6346E6002404D6 /* FCCustomerInfoViewController.m */,
 			);
 			path = WealthManager;
 			sourceTree = "<group>";
@@ -335,11 +345,13 @@
 				BEF97BEF1A572CC100FA4210 /* FCAssignTableViewCell.m in Sources */,
 				BEF97BE91A57092500FA4210 /* FCCheckinViewController.m in Sources */,
 				1080FF2A1A5265FE0082FE09 /* AppDelegate.m in Sources */,
+				BED1777E1A632EBC002404D6 /* FCWealthQueueTableViewController.m in Sources */,
 				103CC07C1A5328A200F7F98A /* FCLocalDataController.m in Sources */,
 				BEB63C8D1A53A20C0090FEA8 /* FCMemberTableViewCell.m in Sources */,
 				BEB63C8A1A538C570090FEA8 /* FCMemberviewTableViewController.m in Sources */,
 				1080FF271A5265FE0082FE09 /* main.m in Sources */,
 				BEF97BEC1A57276400FA4210 /* FCAssignTableViewController.m in Sources */,
+				BED177811A6346E6002404D6 /* FCCustomerInfoViewController.m in Sources */,
 				1080FF861A526FE40082FE09 /* FCLoginViewController.m in Sources */,
 				BEF97BF21A57466400FA4210 /* FCAddViewController.m in Sources */,
 			);

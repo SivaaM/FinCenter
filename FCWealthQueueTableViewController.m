@@ -1,26 +1,26 @@
 //
-//  FCQueueTableViewController.m
+//  WealthQueueTableViewController.m
 //  FinancialCenter
 //
-//  Created by Aravind Thiyagarajan on 12/31/14.
-//  Copyright (c) 2014 USAA. All rights reserved.
+//  Created by Aravind Thiyagarajan on 1/11/15.
+//  Copyright (c) 2015 USAA. All rights reserved.
 //
 
-#import "FCQueueTableViewController.h"
+#import "FCWealthQueueTableViewController.h"
 #import "FCLocalDataController.h"
-#import "FCMemberTableViewCell.h"
+#import "FCAssignTableViewCell.h"
+#import "FCCustomerInfoViewController.h"
 
-@interface FCQueueTableViewController ()
-@property (nonatomic,strong) NSArray *results;
-
+@interface FCWealthQueueTableViewController ()
+@property (nonatomic,strong) NSMutableArray *results;
 @end
 
-@implementation FCQueueTableViewController
-
+@implementation FCWealthQueueTableViewController
+@synthesize results;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [FCLocalDataController fetchMemberQueueListWithcomplitionHandler:^(NSArray *memberList, NSError *error){
-        self.results=memberList;
+        self.results=[NSMutableArray arrayWithArray:memberList];
         
     }];
     
@@ -31,6 +31,12 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -50,49 +56,18 @@
     return self.results.count;
 }
 
--(UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    static NSString *CellIdentifier = @"headercell";
-    return [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Displaycell";
-    FCMemberTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    
-    if (cell == nil) {
-        cell=[[FCMemberTableViewCell alloc] init];
-        
-        
+    FCAssignTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"wealthmanager" forIndexPath:indexPath];
+    if(cell==nil)
+    {
+        FCAssignTableViewCell *cell=[[FCAssignTableViewCell alloc]init];
     }
-    
     NSDictionary *member = (self.results)[indexPath.row];
-    
-    
-    cell.sno.text=member[@"serialNo"];
     cell.name.text=member[@"memberName"];
-    cell.appointment.text=member[@"hasAppointment"];
-    cell.status.text=member[@"status"];
-    NSDateFormatter *time = [[NSDateFormatter alloc] init];
-    [time setDateFormat:@"yyyy.MM.dd G 'at' HH:mm:ss zzz"];
-    NSDate *Date = [time dateFromString:member[@"checkInTime"]];
-    NSString *dateString = [NSDateFormatter localizedStringFromDate:Date
-                                                          dateStyle:NSDateFormatterNoStyle
-                                                          timeStyle:NSDateFormatterShortStyle];
-    
-    cell.time.text=dateString;
-    
-    
     
     return cell;
-    
-}
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 44.0;
-}
-- (BOOL)allowsHeaderViewsToFloat{
-    return YES;
 }
 
 
@@ -130,33 +105,18 @@
 }
 */
 
-/*
-#pragma mark - Navigation
+
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)assign:(id)sender {
-    
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *myVC = [storyboard instantiateViewControllerWithIdentifier:@"whassign"];
     CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
-    
-    FCMemberTableViewCell *cell= (FCMemberTableViewCell*)[self.tableView cellForRowAtIndexPath:indexPath ];
-    
-    self.WmDataPopover = [[UIPopoverController alloc] initWithContentViewController:myVC];
- 
-   
-    
-    [self.WmDataPopover presentPopoverFromRect:[(UITableViewCell *)cell frame]
-                                          inView:self.view
-                        permittedArrowDirections:UIPopoverArrowDirectionAny
-                                        animated:YES];
-    
+    FCCustomerInfoViewController *info = segue.destinationViewController;
+    info.selectedCell=indexPath.row;
+    info.results=self.results;
 }
+
+
 @end
