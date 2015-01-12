@@ -11,7 +11,7 @@
 #import "FCMemberTableViewCell.h"
 
 @interface FCQueueTableViewController ()
-@property (nonatomic,strong) NSArray *results;
+@property (nonatomic,strong) NSMutableArray *results;
 
 @end
 
@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [FCLocalDataController fetchMemberQueueListWithcomplitionHandler:^(NSArray *memberList, NSError *error){
-        self.results=memberList;
+        self.results=[NSMutableArray arrayWithArray:memberList];
         
     }];
     

@@ -7,13 +7,14 @@
 //
 
 #import "FCCheckinViewController.h"
+#import "FCLocalDataController.h"
 
 @interface FCCheckinViewController ()
-
+@property (nonatomic,strong) NSMutableArray *results;
 @end
 
 @implementation FCCheckinViewController
-
+@synthesize results;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -57,6 +58,8 @@
             textField.text = nil;
         }
     }
-       
+   
+    
+          
 }
 @end
