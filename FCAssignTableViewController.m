@@ -15,13 +15,20 @@
 @end
 
 @implementation FCAssignTableViewController
-@synthesize name;
+@synthesize name,eagleId;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.name =  [[NSMutableArray alloc] init];
+    
        [self.name addObject:@"John Miller"];
     [self.name addObject:@"David johson"];
     [self.name addObject:@"Rebbaca black"];
+    
+     self.eagleId =  [[NSMutableArray alloc] init];
+    [self.eagleId addObject:@"PL0132"];
+    [self.eagleId addObject:@"PL0122"];
+    [self.eagleId addObject:@"PL012"];
+
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -56,7 +63,11 @@
     {
         FCAssignTableViewCell *cell=[[FCAssignTableViewCell alloc]init];
     }
+    
+    NSLog([self.name objectAtIndex:indexPath.row]);
     cell.name.text=[self.name objectAtIndex:indexPath.row];
+    cell.eaid.text=[self.eagleId objectAtIndex:indexPath.row];
+
     
     return cell;
 }
@@ -107,6 +118,7 @@
     
        FCAddViewController *add = segue.destinationViewController;
     add.agentName=self.name;
+    add.agentId=self.eagleId;
 }
 
 
@@ -128,6 +140,8 @@
              {
                 cell.name.textColor=[UIColor redColor];
              }
+             
+            
             
 
          }

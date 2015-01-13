@@ -11,6 +11,7 @@
 @interface FCAssignTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *activeInactive;
+@property (weak, nonatomic) IBOutlet UILabel *eaid;
 
 
 

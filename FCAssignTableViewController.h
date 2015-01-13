@@ -10,7 +10,9 @@
 
 @interface FCAssignTableViewController : UITableViewController
 @property(strong,nonatomic) NSMutableArray* name;
+@property(strong,nonatomic) NSMutableArray* eagleId;
 - (IBAction)isActive:(id)sender;
+
 
 
 @end

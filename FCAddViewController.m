@@ -13,7 +13,7 @@
 @end
 
 @implementation FCAddViewController
-@synthesize agentName,first,middle,last;
+@synthesize agentName,first,middle,last,agentId;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -37,6 +37,7 @@
 - (IBAction)add:(id)sender {
     NSString *fullname=[NSString stringWithFormat:@"%@ %@ %@",self.first.text, self.middle.text, self.last.text];
     [agentName addObject:fullname];
+    [agentId addObject:self.idGot.text];
     [self.navigationController popViewControllerAnimated:YES];
     
      }

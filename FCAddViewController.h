@@ -13,7 +13,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *middle;
 @property (weak, nonatomic) IBOutlet UITextField *last;
 
+@property (weak, nonatomic) IBOutlet UITextField *idGot;
+
 - (IBAction)add:(id)sender;
 @property(strong,nonatomic) NSMutableArray* agentName;
+@property(strong,nonatomic) NSMutableArray* agentId;
+
 
 @end

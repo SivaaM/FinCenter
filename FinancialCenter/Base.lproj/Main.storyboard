@@ -489,7 +489,7 @@
             </objects>
             <point key="canvasLocation" x="2056" y="-670"/>
         </scene>
-        <!--Check In-->
+        <!--USAA Financial Center Check In-->
         <scene sceneID="MpK-yP-0AC">
             <objects>
                 <viewController id="vJZ-EO-dPs" customClass="FCCheckinViewController" sceneMemberID="viewController">
@@ -602,7 +602,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Check in" id="lJK-dL-9qY"/>
-                    <navigationItem key="navigationItem" title="Check In" id="IPc-oh-1Up"/>
+                    <navigationItem key="navigationItem" title="USAA Financial Center Check In" id="IPc-oh-1Up"/>
                     <connections>
                         <outlet property="pickerview" destination="Fh5-Ci-750" id="B4L-Zj-V5P"/>
                         <outlet property="reason" destination="DSx-UH-9bU" id="dQr-cx-LvQ"/>
@@ -659,8 +659,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eagle ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vYn-vk-ufi">
+                                <rect key="frame" x="178" y="362" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="kVB-zd-EWT">
+                                <rect key="frame" x="319" y="359" width="253" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8sB-P6-yB1">
-                                <rect key="frame" x="429" y="391" width="32" height="30"/>
+                                <rect key="frame" x="429" y="413" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ADD">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -675,6 +688,7 @@
                     <navigationItem key="navigationItem" title="Add Wealth Manager" id="PbR-lD-IHQ"/>
                     <connections>
                         <outlet property="first" destination="PTU-so-qwi" id="6pB-Uy-NMj"/>
+                        <outlet property="idGot" destination="kVB-zd-EWT" id="r6D-yy-p3p"/>
                         <outlet property="last" destination="BKr-ea-gSf" id="pjg-9j-211"/>
                         <outlet property="middle" destination="0FF-gB-FSc" id="DyR-vL-y0g"/>
                     </connections>
@@ -702,13 +716,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aMZ-WN-0vS" id="k6p-HL-ADT">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Miller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fhr-eB-xwx">
-                                            <rect key="frame" x="22" y="8" width="311" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" id="zfb-Oj-j5h">
                                             <rect key="frame" x="558" y="7" width="133" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -720,11 +727,26 @@
                                                 <action selector="isActive:" destination="05S-it-7yp" eventType="valueChanged" id="Nid-V1-e0K"/>
                                             </connections>
                                         </segmentedControl>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NAr-Mc-2Yo">
+                                            <rect key="frame" x="332" y="14" width="149" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Miller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fhr-eB-xwx">
+                                            <rect key="frame" x="22" y="8" width="311" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="activeInactive" destination="zfb-Oj-j5h" id="CBf-8l-fWg"/>
-                                    <outlet property="name" destination="Fhr-eB-xwx" id="8Xy-gd-8BZ"/>
+                                    <outlet property="eaid" destination="NAr-Mc-2Yo" id="ICn-kA-P3o"/>
+                                    <outlet property="name" destination="Fhr-eB-xwx" id="HSV-sO-yN5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
