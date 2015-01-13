@@ -114,7 +114,7 @@
             
 
         }
-        else if ([username isEqualToString:@"wealthmanager"])
+        else if ([username isEqualToString:@"floormanager"])
         {
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             FCMemberviewTableViewController *myVC = (FCMemberviewTableViewController *)[storyboard instantiateViewControllerWithIdentifier:@"whview"];

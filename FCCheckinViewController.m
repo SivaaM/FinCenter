@@ -63,6 +63,19 @@
     
     
 }
+- (IBAction)dateactive:(id)sender {
+    if([self.sw isOn])
+    {
+        self.datefield.enabled=YES;
+        self.amPm.enabled=YES;
+    }
+    else
+    {
+        self.datefield.enabled=NO;
+        self.amPm.enabled=NO;
+    }
+}
+
 - (IBAction)clear:(id)sender {
     
     for (UIView *view in self.view.subviews) {
