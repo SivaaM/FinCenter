@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FCCheckinViewController : UIViewController
+@interface FCCheckinViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
+
 
 - (IBAction)clear:(id)sender;
 - (IBAction)checkin:(id)sender;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerview;
+
+@property (weak, nonatomic) IBOutlet UILabel *reason;
 
 @end

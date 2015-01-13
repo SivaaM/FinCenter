@@ -74,7 +74,7 @@
     cell.appointment.text=member[@"hasAppointment"];
     cell.status.text=member[@"status"];
      NSDateFormatter *time = [[NSDateFormatter alloc] init];
-    [time setDateFormat:@"yyyy.MM.dd G 'at' HH:mm:ss zzz"];
+    [time setDateFormat:@"yyyy.MM.dd G 'at' HH:mm:ss"];
     NSDate *Date = [time dateFromString:member[@"checkInTime"]];
     NSString *dateString = [NSDateFormatter localizedStringFromDate:Date
                                                           dateStyle:NSDateFormatterNoStyle

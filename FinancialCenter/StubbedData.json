@@ -2,40 +2,40 @@
                 "members": [{
                              "serialNo": "1",
                              "memberName": "Zack Dawn",
-                             "checkInTime":"1996.07.10 AD at 5:08:56 PDT",
-                             "hasAppointment": "No",
+                             "checkInTime":"1996.07.10 AD at 8:08:56",
+                             "hasAppointment": "Walk-in",
                              "status": "In Queue",
                             "reason": "New loan"
                              },
                             {
                             "serialNo": "2",
                             "memberName": "Paul Hussel",
-                            "checkInTime":"1996.07.10 AD at 20:08:56 PDT",
-                            "hasAppointment": "No",
+                            "checkInTime":"1996.07.10 AD at 8:15:56",
+                            "hasAppointment": "Walk-in",
                             "status": "In Queue",
                             "reason": "Opening new account"
                             },
                             {
                             "serialNo": "3",
                             "memberName": "George Lyn",
-                            "checkInTime":"1996.07.10 AD at 19:08:56 PDT",
-                            "hasAppointment": "No",
+                            "checkInTime":"1996.07.10 AD at 9:00:56",
+                            "hasAppointment": "9.15 AM",
                             "status": "In Queue",
                             "reason": "Creating retirement plan"
                             },
                             {
                             "serialNo": "4",
                             "memberName": "Fran Smith",
-                            "checkInTime":"1996.07.10 AD at 4:08:56 PDT",
-                            "hasAppointment": "No",
+                            "checkInTime":"1996.07.10 AD at 9:08:56",
+                            "hasAppointment": "Walk-in",
                             "status": "In Queue",
                             "reason": "New loan"
                             },
                             {
                             "serialNo": "5",
                             "memberName": "Rob Travis",
-                            "checkInTime":"1996.07.10 AD at 1:08:56 PDT",
-                            "hasAppointment": "No",
+                            "checkInTime":"1996.07.10 AD at 9:15:56",
+                            "hasAppointment": "9.30 AM",
                             "status": "In Queue",
                             "reason": "Banking issue"
                             }]
